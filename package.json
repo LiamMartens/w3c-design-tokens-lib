@@ -1,6 +1,6 @@
 {
   "name": "w3c-design-tokens",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "types",
@@ -19,7 +19,7 @@
     "just-pick": "^4.1.1",
     "just-safe-get": "^4.1.1",
     "just-safe-set": "^4.1.1",
-    "zod": "^3.18.0"
+    "zod": "^3.0.0"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.57",
