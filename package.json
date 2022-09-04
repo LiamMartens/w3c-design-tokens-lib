@@ -1,6 +1,6 @@
 {
   "name": "w3c-design-tokens",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "types",
