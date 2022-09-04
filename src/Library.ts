@@ -21,12 +21,17 @@ Validators extends Record<keyof Map, z.ZodType>
   private $tokens: ITokenGroup<Map, Ext>;
   private $validators: Partial<Validators>;
   private $subscribers: (
-    (mutations: [string, TokenOrGroup<Map, Ext> | null][], $tokens: ITokenGroup<Map, Ext>) => void
+    (mutations: [string, TokenOrGroup<Map, Ext> | null][] | null, $tokens: ITokenGroup<Map, Ext>) => void
   )[] = [];
 
   constructor($tokens: ITokenGroup<Map, Ext>, $validators: Partial<Validators> = {}) {
     this.$tokens = $tokens;
     this.$validators = $validators;
+  }
+
+  public load($tokens: ITokenGroup<Map, Ext>) {
+    this.$tokens = $tokens;
+    this.$subscribers.forEach((fn) => fn(null, this.$tokens));
   }
 
   public get(token: string) {
