@@ -5,6 +5,7 @@
   "module": "lib/esm/index.js",
   "types": "types",
   "license": "MIT",
+  "files": ["lib", "types"],
   "scripts": {
     "build": "run-p build:*",
     "build:esm": "swc -C module.type=es6 -d ./lib/esm ./src",
