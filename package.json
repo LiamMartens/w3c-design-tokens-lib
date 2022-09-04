@@ -1,0 +1,29 @@
+{
+  "name": "w3c-design-tokens",
+  "version": "1.0.0",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "types",
+  "license": "MIT",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:esm": "swc -C module.type=es6 -d ./lib/esm ./src",
+    "build:cjs": "swc -C module.type=commonjs -d ./lib/cjs ./src",
+    "build:types": "tsc -p ."
+  },
+  "dependencies": {
+    "json-schema-traverse": "^1.0.0",
+    "just-compact": "^3.1.1",
+    "just-extend": "^6.1.1",
+    "just-pick": "^4.1.1",
+    "just-safe-get": "^4.1.1",
+    "just-safe-set": "^4.1.1",
+    "zod": "^3.18.0"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.247",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.8.2"
+  }
+}

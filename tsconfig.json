@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./lib",
+    "declarationDir": "types",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "moduleResolution": "node",
+    "lib": ["DOM", "ES2018", "ES2019"],
+    "esModuleInterop": true,
+    "strictNullChecks": true
+  },
+  "include": ["./src"],
+  "exclude": [
+    "node_modules"
+  ]
+}
